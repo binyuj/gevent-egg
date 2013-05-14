@@ -6,6 +6,9 @@ from distutils.core import setup
 
 if sys.version[:3] not in ('2.6', '2.7'):
     raise NotImplementedError("Sorry, you need at Python 2.6/2.7 to use gevent-egg.")
+    
+if sys.maxunicode == 65535:
+    raise NotImplementedError("Sorry, you need at Python UCS4 to use gevent-egg.")
 
 if sys.platform not in ('linux2', 'darwin', 'win32'):
     raise NotImplementedError("Sorry, you need at Linux/MacOS/WinNT to use gevent-egg.")
