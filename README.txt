@@ -1,0 +1,1 @@
+pip install git+git://github.com/phuslu/gevent-egg.git
