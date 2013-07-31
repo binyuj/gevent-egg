@@ -7,8 +7,8 @@ This library supply gevent prebuilt egg for python 2.7
 Requirements
 ------------
 
-* Python == 2.7
-* Platfrom in ('win32', 'darwin', 'linux2')
+* sys.version[:3] == '2.7'
+* sys.platform in ('win32', 'linux2', 'darwin')
 
 
 Usage
