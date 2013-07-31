@@ -24,13 +24,13 @@ pip
 
 ..
     
-    pip install git+git://github.com/phuslu/gevent-egg.git
+    pip install git+git://github.com/phuslu/gevent-egg.git@master#egg=gevent
 
 requirements.txt
 
 ..
     
-    -e git://github.com/phuslu/gevent-egg.git#egg=gevent
+    -e git://github.com/phuslu/gevent-egg.git@master#egg=gevent
 
 
 
