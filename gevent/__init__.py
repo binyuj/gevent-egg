@@ -8,8 +8,10 @@ See http://www.gevent.org/ for the documentation.
 
 from __future__ import absolute_import
 
-version_info = (1, 0, 0, 'dev', None)
-__version__ = '1.0dev'
+version_info = (1, 0, 0, 'candidate', 3)
+__version__ = '1.0rc3'
+__changeset__ = '1.0rc3-0-g2441412'
+
 
 __all__ = ['get_hub',
            'Greenlet',
@@ -30,15 +32,6 @@ __all__ = ['get_hub',
            'fork',
            'reinit']
 
-def __bootstrap__():
-  global __bootstrap__
-  import sys, os
-  if '.egg' in __file__:
-    __eggfile__ = __file__[:__file__.find('egg')+3]
-    if os.path.isfile(__eggfile__) and sys.path[0] != __eggfile__:
-      sys.path.insert(0, __eggfile__)
-    del __bootstrap__, __eggfile__
-__bootstrap__()
 
 from gevent.hub import get_hub, iwait, wait
 from gevent.greenlet import Greenlet, joinall, killall
@@ -55,7 +48,7 @@ run = wait  # XXX to be deleted (soon)
 
 
 # the following makes hidden imports visible to freezing tools like
-# py2exe. see https://github.com/SiteSupport/gevent/issues/181
+# py2exe. see https://github.com/surfly/gevent/issues/181
 def __dependencies_for_freezing():
     from gevent import core, resolver_thread, resolver_ares, socket,\
         threadpool, thread, threading, select, subprocess
