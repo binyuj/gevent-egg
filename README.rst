@@ -18,7 +18,7 @@ easy_install:
 
 ..
     
-    easy_install https://github.com/phuslu/gevent-egg/raw/egg/gevent-1.0dev-py2.7.egg
+    easy_install https://github.com/phuslu/gevent-egg/raw/egg/gevent-1.0-py2.7-linux.egg
     
 pip
 
